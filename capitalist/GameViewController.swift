@@ -9,14 +9,18 @@
 import UIKit
 import QuartzCore
 import SceneKit
+import SpriteKit
+
 
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // zzzzzz
+        
         // create a new scene
         let scene = SCNScene(named: "art.scnassets/ship.dae")!
+       
+        
         
         // create and add a camera to the scene
         let cameraNode = SCNNode()
@@ -49,8 +53,13 @@ class GameViewController: UIViewController {
         // retrieve the SCNView
         let scnView = self.view as! SCNView
         
+    
         // set the scene to the view
         scnView.scene = scene
+        
+        //Add the overlayScene
+        let overlayScene  =  WelcomeScreenAquireView(size: scnView.bounds.size)
+        scnView.overlaySKScene = overlayScene
         
         // allows the user to manipulate the camera
         scnView.allowsCameraControl = true
@@ -60,6 +69,8 @@ class GameViewController: UIViewController {
         
         // configure the view
         scnView.backgroundColor = UIColor.blackColor()
+        
+    
         
         // add a tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: "handleTap:")
@@ -116,11 +127,7 @@ class GameViewController: UIViewController {
     }
     
     override func supportedInterfaceOrientations() -> Int {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
-        } else {
-            return Int(UIInterfaceOrientationMask.All.rawValue)
-        }
+        return Int(UIInterfaceOrientationMask.Landscape.rawValue)
     }
     
     override func didReceiveMemoryWarning() {
