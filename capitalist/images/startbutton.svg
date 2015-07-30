@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512mm"
+   height="512mm"
+   viewBox="0 0 1814.1732 1814.1732"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="startbutton.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4147">
+      <stop
+         style="stop-color:#f80000;stop-opacity:1;"
+         offset="0"
+         id="stop4149" />
+      <stop
+         style="stop-color:#f80000;stop-opacity:0;"
+         offset="1"
+         id="stop4151" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4147"
+       id="linearGradient4153"
+       x1="862.85712"
+       y1="460.93362"
+       x2="862.85712"
+       y2="-19.066374"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="613.57143"
+     inkscape:cy="862.85714"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2048"
+     inkscape:window-height="1046"
+     inkscape:window-x="36"
+     inkscape:window-y="3"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,761.81102)">
+    <path
+       style="opacity:0.98000004;fill:url(#linearGradient4153);fill-opacity:1;stroke:none;stroke-linejoin:round;stroke-opacity:1"
+       d="m 124.20703,-108.95312 c -1.1506,21.926167 -0.16246,44.239629 -0.49219,66.314448 0,178.333332 0,356.666662 0,535.000002 3.59546,4.41007 11.64775,0.8557 17,2 524.52344,0 1049.04686,0 1573.57036,0 4.41,-3.59546 0.8557,-11.64775 2,-17 0,-195 0,-390.000002 0,-585 -3.5955,-4.41007 -11.6478,-0.85571 -17,-2 -524.5235,0 -1049.04692,0 -1573.57036,0 l -0.91032,0.41389 -0.59749,0.27166 z"
+       id="rect4138"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4155"
+       style="font-style:normal;font-weight:normal;font-size:180px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#f8ef09;fill-opacity:0.96894407;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       transform="matrix(2.0438064,0,0,1.9653745,-1039.2026,-1631.3356)"><flowRegion
+         id="flowRegion4157"><rect
+           id="rect4159"
+           width="1388.5714"
+           height="280"
+           x="260"
+           y="834.17322"
+           style="font-size:180px;text-align:center;text-anchor:middle;fill:#f8ef09;fill-opacity:0.96894407;" /></flowRegion><flowPara
+         id="flowPara4161"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#f8ef09;fill-opacity:0.96894407;">Start</flowPara></flowRoot>  </g>
+</svg>
