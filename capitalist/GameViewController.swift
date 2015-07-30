@@ -14,6 +14,8 @@ import SpriteKit
 
 class GameViewController: UIViewController {
 
+    var overlayScene: WelcomeScreenAquireView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,7 +60,8 @@ class GameViewController: UIViewController {
         scnView.scene = scene
         
         //Add the overlayScene
-        let overlayScene  =  WelcomeScreenAquireView(size: scnView.bounds.size)
+        self.overlayScene  =  WelcomeScreenAquireView(size: scnView.bounds.size)
+        self.overlayScene.name="WelcomeScreenAquireView";
         scnView.overlaySKScene = overlayScene
         
         // allows the user to manipulate the camera
@@ -73,13 +76,63 @@ class GameViewController: UIViewController {
     
         
         // add a tap gesture recognizer
-        let tapGesture = UITapGestureRecognizer(target: self, action: "handleTap:")
+    /*    let tapGesture = UITapGestureRecognizer(target: self, action: "handleTap:")
         var gestureRecognizers = [AnyObject]()
         gestureRecognizers.append(tapGesture)
         if let existingGestureRecognizers = scnView.gestureRecognizers {
             gestureRecognizers.extend(existingGestureRecognizers)
         }
         scnView.gestureRecognizers = gestureRecognizers
+  */
+  }
+    override func viewWillAppear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "set3Players", name: "3Players", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "set4Players", name: "4Players", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "set5Players", name: "5Players", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "set6Players", name: "6Players", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "doStart", name: "StartButton", object: nil)
+        
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "3Players", object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "4Players", object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "5Players", object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "6Players", object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "StartButton", object: nil)
+    }
+    
+    func set3Players()
+    {
+       println("Player : 3Players")
+       
+    }
+    
+    func set4Players()
+    {
+        println("Player : 4 Players")
+        
+    }
+    
+    func set5Players()
+    {
+        println("Player : 5 Players")
+        
+    }
+    
+    func set6Players()
+    {
+        println("Player : 6 Players")
+        
+    }
+    
+    func doStart()
+    {
+        println("Player : start")
+        
+        self.overlayScene.hidden = true
+        
     }
     
     func handleTap(gestureRecognize: UIGestureRecognizer) {
@@ -94,6 +147,7 @@ class GameViewController: UIViewController {
                 // retrieved the first clicked object
                 let result: AnyObject! = hitResults[0]
                 
+               
                 // get its material
                 let material = result.node!.geometry!.firstMaterial!
                 
@@ -117,6 +171,8 @@ class GameViewController: UIViewController {
             }
         }
     }
+    
+   
     
     override func shouldAutorotate() -> Bool {
         return true
