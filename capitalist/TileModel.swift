@@ -25,7 +25,7 @@ let tileCornerBottomLeft:Int = 96
 let tileCornerBottomRight:Int = 107
 
 
-class Tile:NSObject {
+class TileModel:NSObject {
 
     var name:String = ""
     var image:String = ""
@@ -36,10 +36,10 @@ class Tile:NSObject {
     var owner:Int = 0
     var label:String = ""
     var color:UIColor = whiteColor
-    var tileAbove:Tile?
-    var tileBelow:Tile?
-    var tileLeft:Tile?
-    var tileRight:Tile?
+    var tileAbove:TileModel?
+    var tileBelow:TileModel?
+    var tileLeft:TileModel?
+    var tileRight:TileModel?
     
     init(_label: String, _width: CGFloat, _height: CGFloat, tileSpacer: CGFloat, _position: CGPoint) {
         self.label = _label
@@ -49,11 +49,11 @@ class Tile:NSObject {
         self.position = _position
     }
     
-    func changeTileColor(color:UIColor, thisTile:Tile) {
+    func changeTileColor(color:UIColor, thisTile:TileModel) {
         thisTile.color = color
     }
     
-    func changeOwner(thisTile: Tile, ownerName: String) {
+    func changeOwner(thisTile: TileModel, ownerName: String) {
         switch ownerName {
         case "Player":
             thisTile.owner = 1
@@ -66,7 +66,7 @@ class Tile:NSObject {
         }
     }
     
-    func isPicked(thisTile: Tile) -> Bool{
+    func isPicked(thisTile: TileModel) -> Bool{
         if thisTile.owner != 0 {
             return true;
         }
@@ -75,7 +75,7 @@ class Tile:NSObject {
         }
     }
     
-    func isOwnedByPlayer(thisTile: Tile) -> Bool{
+    func isOwnedByPlayer(thisTile: TileModel) -> Bool{
         if thisTile.owner == 1 {
             return true;
         }
@@ -84,7 +84,7 @@ class Tile:NSObject {
         }
     }
     
-    func isOwnedByBoard(thisTile: Tile) -> Bool{
+    func isOwnedByBoard(thisTile: TileModel) -> Bool{
         if thisTile.owner == 2 {
             return true;
         }
@@ -93,7 +93,7 @@ class Tile:NSObject {
         }
     }
     
-    func isOwnedByHotel(thisTile: Tile) -> Bool{
+    func isOwnedByHotel(thisTile: TileModel) -> Bool{
         if thisTile.owner == 3 {
             return true;
         }
@@ -102,7 +102,7 @@ class Tile:NSObject {
         }
     }
     
-    func addNeighbors (Tiles:[Tile], currTile:Tile, currTileIndex:Int, numCols:Int) {
+    func addNeighbors (Tiles:[TileModel], currTile:TileModel, currTileIndex:Int, numCols:Int) {
         //Setup 4 corners
         //Top Left Corner Tile (no tileAbove nor tileLeft)
         if currTileIndex == tileCornerTopLeft {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GameSenceModelAndSequencer {
+class GameSceneModelAndSequencer {
     //<#properties and methods#>
 
 }

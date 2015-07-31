@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-class Hotel:NSObject {
+class HotelModel:NSObject {
     var ID: Int
     var name: String
     var color: UIColor
     var activeFlag: Bool
-    var listOfTiles: [Tile] = []
+    var listOfTiles: [TileModel] = []
     var safeFlag: Bool
     var stockPrice: Int
     var majorityPayout: Int
@@ -30,4 +30,13 @@ class Hotel:NSObject {
         self.majorityPayout = _majorityPayout
         self.minorityPayout = _minorityPayout
     }
+    
+    func isActive(thisHotel: HotelModel) -> Bool{
+        return thisHotel.activeFlag;
+    }
+    
+    func calcStockPrice(thisHotel: HotelModel) -> Int{
+        //Identify num of tiles using listOfTiles, then use InfoCard Model to match hotel and numTiles to Stock Price
+    }
+    
 }
