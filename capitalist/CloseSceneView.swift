@@ -25,6 +25,11 @@ class CloseSceneView: SKScene {
         self.closeGameOverMessage.name="GameOver"
         
         self.addChild(self.closeGameOverMessage)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateView", name: "GameSceneModelAndSequencer", object: nil)
+        
+    }
+    func updateView(){
+       println ("CloseSceneView was updated!")
     }
 
     required init?(coder aDecoder: NSCoder) {

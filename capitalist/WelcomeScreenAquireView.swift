@@ -111,10 +111,12 @@ class WelcomeScreenAquireView: SKScene {
         self.welcomeMessageNode.name  = "welcomemessage"
         self.welcomeMessageNode.position = CGPoint(x: 0, y: self.startButtonNode.position.y + 500)
         self.addChild(welcomeMessageNode)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateView", name: "GameSceneModelAndSequencer", object: nil)
         
     
     }
     
+     func updateView(){ println ("Welcome Screen was Updated!")}
 
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -157,6 +159,8 @@ class WelcomeScreenAquireView: SKScene {
         
     }
   
+    
+    
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

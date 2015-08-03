@@ -16,6 +16,12 @@ class GameViewController: UIViewController {
 
     var overlaySceneWelcome: WelcomeScreenAquireView!
     var overlaySceneClose: CloseSceneView!
+    let modelGameScene = GameSceneModelAndSequencer()
+    let PlayersToBe3 = 3
+    let PlayersToBe4 = 4
+    let PlayersToBe5 = 5
+    let PlayersToBe6 = 6
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,28 +116,24 @@ class GameViewController: UIViewController {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "StartButton", object: nil)
     }
     
-    func set3Players()
-    {
+    func set3Players(){
        println("Player : 3Players")
-       
+        modelGameScene.setNumberOfPlayers(self.PlayersToBe3)
     }
     
-    func set4Players()
-    {
+    func set4Players(){
         println("Player : 4 Players")
-        
+        modelGameScene.setNumberOfPlayers(self.PlayersToBe4)
     }
     
-    func set5Players()
-    {
+    func set5Players(){
         println("Player : 5 Players")
-        
+        modelGameScene.setNumberOfPlayers(self.PlayersToBe6)
     }
     
-    func set6Players()
-    {
+    func set6Players(){
         println("Player : 6 Players")
-        
+        modelGameScene.setNumberOfPlayers(self.PlayersToBe6)
     }
     
     func doStart()

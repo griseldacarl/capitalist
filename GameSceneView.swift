@@ -12,5 +12,20 @@ import SceneKit
 import SpriteKit
 
 class GameSceneView: SKScene {
-   
+ 
+    override init(size: CGSize){
+        super.init(size: size)
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateView", name: "GameSceneModelAndSequencer", object: nil)
+        
+    }
+    
+     func updateView(){
+      println ("GameSceneView was updated!")
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
