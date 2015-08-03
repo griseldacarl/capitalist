@@ -14,7 +14,8 @@ import SpriteKit
 
 class GameViewController: UIViewController {
 
-    var overlayScene: WelcomeScreenAquireView!
+    var overlaySceneWelcome: WelcomeScreenAquireView!
+    var overlaySceneClose: CloseSceneView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,27 +52,12 @@ class GameViewController: UIViewController {
         
         // animate the 3d object
         ship.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 2, z: 0, duration: 1)))
-        
-        // retrieve the SCNView
         let scnView = self.view as! SCNView
         
-    
+        
         // set the scene to the view
         scnView.scene = scene
         
-        //Add the overlayScene
-        self.overlayScene  =  WelcomeScreenAquireView(size: scnView.bounds.size)
-        self.overlayScene.name="WelcomeScreenAquireView";
-        scnView.overlaySKScene = overlayScene
-        
-        // allows the user to manipulate the camera
-        scnView.allowsCameraControl = true
-        
-        // show statistics such as fps and timing information
-        scnView.showsStatistics = true
-        
-        // configure the view
-        scnView.backgroundColor = UIColor.blackColor()
         
     
         
@@ -85,6 +71,27 @@ class GameViewController: UIViewController {
         scnView.gestureRecognizers = gestureRecognizers
   */
   }
+    override func viewWillLayoutSubviews() {
+        // retrieve the SCNView
+        let scnView = self.view as! SCNView
+        
+        if(scnView.scene != nil){
+        
+        //Add the overlayScene
+        self.overlaySceneWelcome  =  WelcomeScreenAquireView(size: scnView.bounds.size)
+        self.overlaySceneWelcome.name="WelcomeScreenAquireView";
+        scnView.overlaySKScene = overlaySceneWelcome
+        
+        // allows the user to manipulate the camera
+        scnView.allowsCameraControl = true
+        
+        // show statistics such as fps and timing information
+        scnView.showsStatistics = true
+        
+        // configure the view
+        scnView.backgroundColor = UIColor.blackColor()
+        }
+    }
     override func viewWillAppear(animated: Bool) {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "set3Players", name: "3Players", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "set4Players", name: "4Players", object: nil)
@@ -130,8 +137,10 @@ class GameViewController: UIViewController {
     func doStart()
     {
         println("Player : start")
-        
-        self.overlayScene.hidden = true
+        //let scnView = self.view as! SCNView
+        self.overlaySceneWelcome.hidden = true
+        //self.overlaySceneClose = CloseSceneView(size: self.view.bounds.size)
+        //scnView.overlaySKScene = self.overlaySceneClose
         
     }
     
