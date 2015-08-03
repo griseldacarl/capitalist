@@ -16,6 +16,8 @@ class GameViewController: UIViewController {
 
     var overlaySceneWelcome: WelcomeScreenAquireView!
     var overlaySceneClose: CloseSceneView!
+    var overlaySceneGame: GameSceneView!
+    
     let modelGameScene = GameSceneModelAndSequencer()
     let PlayersToBe3 = 3
     let PlayersToBe4 = 4
@@ -118,31 +120,31 @@ class GameViewController: UIViewController {
     
     func set3Players(){
        println("Player : 3Players")
-        modelGameScene.setNumberOfPlayers(self.PlayersToBe3)
+        modelGameScene.setNumberOfPlayersWithNotification(self.PlayersToBe3)
     }
     
     func set4Players(){
         println("Player : 4 Players")
-        modelGameScene.setNumberOfPlayers(self.PlayersToBe4)
+        modelGameScene.setNumberOfPlayersWithNotification(self.PlayersToBe4)
     }
     
     func set5Players(){
         println("Player : 5 Players")
-        modelGameScene.setNumberOfPlayers(self.PlayersToBe6)
+        modelGameScene.setNumberOfPlayersWithNotification(self.PlayersToBe6)
     }
     
     func set6Players(){
         println("Player : 6 Players")
-        modelGameScene.setNumberOfPlayers(self.PlayersToBe6)
+        modelGameScene.setNumberOfPlayersWithNotification(self.PlayersToBe6)
     }
     
     func doStart()
     {
         println("Player : start")
-        //let scnView = self.view as! SCNView
+        let scnView = self.view as! SCNView
         self.overlaySceneWelcome.hidden = true
-        //self.overlaySceneClose = CloseSceneView(size: self.view.bounds.size)
-        //scnView.overlaySKScene = self.overlaySceneClose
+        self.overlaySceneGame = GameSceneView(size: self.view.bounds.size)
+        scnView.overlaySKScene = self.overlaySceneGame
         
     }
     

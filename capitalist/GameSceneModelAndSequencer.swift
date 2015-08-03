@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 public struct InfoCardPosition{
     public var infoCardPositionX: Float = 0.0
     public var infocardPositionY: Float = 0.0
@@ -29,7 +29,7 @@ public struct GameBoardPosition{
     
 }
 
-public class GameSceneModelAndSequencer  {
+public class GameSceneModelAndSequencer : NSObject {
 
     var  numberOfPlayers: Int = 0
     
@@ -38,9 +38,9 @@ public class GameSceneModelAndSequencer  {
     var moneyLocation: MoneyPosition = MoneyPosition()
     var gameboardLocation: GameBoardPosition = GameBoardPosition()
     
-    init(){}
 
-    public func setNumberOfPlayers(players: Int){
+
+    public func setNumberOfPlayersWithNotification(players: Int){
          numberOfPlayers = players
          notifyViews()
     }
