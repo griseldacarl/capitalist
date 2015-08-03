@@ -18,12 +18,10 @@
 		E95860021B5D975A00E22A0C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E95860001B5D975A00E22A0C /* LaunchScreen.xib */; };
 		E958600E1B5D975A00E22A0C /* capitalistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E958600D1B5D975A00E22A0C /* capitalistTests.swift */; };
 		E97168FF1B6A760900B33A17 /* GameSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97168FE1B6A760900B33A17 /* GameSceneView.swift */; };
-		E97169011B6A76EF00B33A17 /* GameSceneModelAndSequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97169001B6A76EF00B33A17 /* GameSceneModelAndSequencer.swift */; };
 		E9B1411B1B66D49D0075FA2A /* WelcomeScreenAquireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B1411A1B66D49D0075FA2A /* WelcomeScreenAquireView.swift */; };
 		E9B141211B6724510075FA2A /* startbutton.svg in Resources */ = {isa = PBXBuildFile; fileRef = E9B141201B6724510075FA2A /* startbutton.svg */; };
 		E9B141231B6724670075FA2A /* rect4138.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B141221B6724670075FA2A /* rect4138.png */; };
 		E9B141251B6734CC0075FA2A /* 3player.svg in Resources */ = {isa = PBXBuildFile; fileRef = E9B141241B6734CC0075FA2A /* 3player.svg */; };
-		E9E39FBC1B6A747D00E8BFEE /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E39FBB1B6A747D00E8BFEE /* SettingsModel.swift */; };
 		E9FDC9D21B6A787D009312D4 /* InfoCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDC9D11B6A787D009312D4 /* InfoCardModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +107,13 @@
 				E9585FFE1B5D975A00E22A0C /* Images.xcassets */,
 				E95860001B5D975A00E22A0C /* LaunchScreen.xib */,
 				E9585FF31B5D975A00E22A0C /* Supporting Files */,
+				030C0FF81B5DB342009BA902 /* TileModel.swift */,
+				E9FDC9D11B6A787D009312D4 /* InfoCardModel.swift */,
+				E9E39FBB1B6A747D00E8BFEE /* SettingsModel.swift */,
+				030C0FFA1B60A1A0009BA902 /* HotelModel.swift */,
+				030C0FFC1B6AEE8B009BA902 /* PlayerModel.swift */,
+				030C0FFE1B6AEF8D009BA902 /* StockModel.swift */,
+				030C10001B6AF54F009BA902 /* StockManager.swift */,
 			);
 			path = capitalist;
 			sourceTree = "<group>";
@@ -119,7 +124,6 @@
 				E9B1411A1B66D49D0075FA2A /* WelcomeScreenAquireView.swift */,
 				E97168FE1B6A760900B33A17 /* GameSceneView.swift */,
 				E97169001B6A76EF00B33A17 /* GameSceneModelAndSequencer.swift */,
-				E9E39FBB1B6A747D00E8BFEE /* SettingsModel.swift */,
 				E9585FF41B5D975A00E22A0C /* Info.plist */,
 				E9FDC9D11B6A787D009312D4 /* InfoCardModel.swift */,
 				E953A8691B6A791F0049E9A3 /* InfoCardView.swift */,
@@ -268,15 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E97169011B6A76EF00B33A17 /* GameSceneModelAndSequencer.swift in Sources */,
-				E9E39FBC1B6A747D00E8BFEE /* SettingsModel.swift in Sources */,
 				E9585FFA1B5D975A00E22A0C /* GameViewController.swift in Sources */,
 				E953A86C1B6A7CE90049E9A3 /* GameBoardModel.swift in Sources */,
 				E91C8DB81B6F0C9300661C53 /* CloseSceneView.swift in Sources */,
 				E9FDC9D21B6A787D009312D4 /* InfoCardModel.swift in Sources */,
 				E97168FF1B6A760900B33A17 /* GameSceneView.swift in Sources */,
 				E9B1411B1B66D49D0075FA2A /* WelcomeScreenAquireView.swift in Sources */,
-				E953A86A1B6A791F0049E9A3 /* InfoCardView.swift in Sources */,
+				E953A86A1B6A791F0049E9A3 /* (null) in Sources */,
 				E9585FF61B5D975A00E22A0C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
