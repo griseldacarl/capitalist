@@ -17,6 +17,8 @@ class GameViewController: UIViewController {
     var overlaySceneWelcome: WelcomeScreenAquireView!
     var overlaySceneClose: CloseSceneView!
     var overlaySceneGame: GameSceneView!
+    var gameBoard: SCNScene!
+    
     
     let modelGameScene = GameSceneModelAndSequencer()
     let PlayersToBe3 = 3
@@ -29,55 +31,62 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         // create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.dae")!
-       
-        
-        
+        let scene = SCNScene(named: "gameboard.scnassets/gameboard.dae")!
+        //let scene = SCNScene()
         // create and add a camera to the scene
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
+        
         scene.rootNode.addChildNode(cameraNode)
         
-        // place the camera
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 15)
-        
+//        // place the camera
+        cameraNode.position = SCNVector3(x: 0, y: 0, z: 10)
+//        
         // create and add a light to the scene
         let lightNode = SCNNode()
         lightNode.light = SCNLight()
-        lightNode.light!.type = SCNLightTypeOmni
-        lightNode.position = SCNVector3(x: 0, y: 10, z: 10)
+        lightNode.light!.type = SCNLightTypeSpot
+        lightNode.light!.spotInnerAngle = 30.0
+        lightNode.light!.spotOuterAngle = 80.0
+        lightNode.position = SCNVector3(x: 0, y: 0, z: 20)
         scene.rootNode.addChildNode(lightNode)
-        
+//
         // create and add an ambient light to the scene
         let ambientLightNode = SCNNode()
         ambientLightNode.light = SCNLight()
         ambientLightNode.light!.type = SCNLightTypeAmbient
-        ambientLightNode.light!.color = UIColor.darkGrayColor()
+        ambientLightNode.light!.color = UIColor.whiteColor()
         scene.rootNode.addChildNode(ambientLightNode)
+//
+        //let boxGeometry = SCNBox(width: 10.0, height: 10.0, length: 10.0, chamferRadius: 1.0)
+        //let boxNode = SCNNode(geometry: boxGeometry)
+        //scene.rootNode.addChildNode(boxNode)
         
         // retrieve the ship node
-        let ship = scene.rootNode.childNodeWithName("ship", recursively: true)!
+      //  let ship = scene.rootNode.childNodeWithName("Plane_001", recursively: true)!
         
         // animate the 3d object
-        ship.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 2, z: 0, duration: 1)))
-        let scnView = self.view as! SCNView
+       // ship.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 2, z: 0, duration: 1)))
+       
         
+        // retrieve the SCNView
+        let scnView = self.view as! SCNView
         
         // set the scene to the view
         scnView.scene = scene
         
+        // allows the user to manipulate the camera
+        scnView.allowsCameraControl = true
         
-    
+        // show statistics such as fps and timing information
+        scnView.showsStatistics = true
         
-        // add a tap gesture recognizer
-    /*    let tapGesture = UITapGestureRecognizer(target: self, action: "handleTap:")
-        var gestureRecognizers = [AnyObject]()
-        gestureRecognizers.append(tapGesture)
-        if let existingGestureRecognizers = scnView.gestureRecognizers {
-            gestureRecognizers.extend(existingGestureRecognizers)
-        }
-        scnView.gestureRecognizers = gestureRecognizers
-  */
+        // configure the view
+        scnView.backgroundColor = UIColor.cyanColor()
+        
+        
+        
+       
   }
     override func viewWillLayoutSubviews() {
         // retrieve the SCNView
@@ -147,44 +156,6 @@ class GameViewController: UIViewController {
         scnView.overlaySKScene = self.overlaySceneGame
         
     }
-    
-    func handleTap(gestureRecognize: UIGestureRecognizer) {
-        // retrieve the SCNView
-        let scnView = self.view as! SCNView
-        
-        // check what nodes are tapped
-        let p = gestureRecognize.locationInView(scnView)
-        if let hitResults = scnView.hitTest(p, options: nil) {
-            // check that we clicked on at least one object
-            if hitResults.count > 0 {
-                // retrieved the first clicked object
-                let result: AnyObject! = hitResults[0]
-                
-               
-                // get its material
-                let material = result.node!.geometry!.firstMaterial!
-                
-                // highlight it
-                SCNTransaction.begin()
-                SCNTransaction.setAnimationDuration(0.5)
-                
-                // on completion - unhighlight
-                SCNTransaction.setCompletionBlock {
-                    SCNTransaction.begin()
-                    SCNTransaction.setAnimationDuration(0.5)
-                    
-                    material.emission.contents = UIColor.blackColor()
-                    
-                    SCNTransaction.commit()
-                }
-                
-                material.emission.contents = UIColor.redColor()
-                
-                SCNTransaction.commit()
-            }
-        }
-    }
-    
    
     
     override func shouldAutorotate() -> Bool {

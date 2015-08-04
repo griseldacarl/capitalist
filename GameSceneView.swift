@@ -13,14 +13,12 @@ import SpriteKit
 
 class GameSceneView: SKScene {
  
-    let board: GameBoardView = GameBoardView()
     let infocard: InfoCardView=InfoCardView()
     let stock: StockView = StockView()
     
     override init(size: CGSize){
         super.init(size: size)
         self.addChild(infocard)
-        self.addChild(board)
         self.addChild(stock)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateView", name: "GameSceneModelAndSequencer", object: nil)

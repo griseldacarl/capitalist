@@ -10,7 +10,6 @@
 		E91C8DB81B6F0C9300661C53 /* CloseSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C8DB71B6F0C9300661C53 /* CloseSceneView.swift */; };
 		E91C8DBB1B6F294300661C53 /* GameSceneModelAndSequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97169001B6A76EF00B33A17 /* GameSceneModelAndSequencer.swift */; };
 		E91C8DBD1B6F3ECA00661C53 /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C8DBC1B6F3ECA00661C53 /* InfoCardView.swift */; };
-		E91C8DBF1B6F3F1500661C53 /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C8DBE1B6F3F1500661C53 /* GameBoardView.swift */; };
 		E91C8DC11B6F3FEF00661C53 /* StockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C8DC01B6F3FEF00661C53 /* StockView.swift */; };
 		E91C8DC31B6F409900661C53 /* GameBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C8DC21B6F409900661C53 /* GameBoardController.swift */; };
 		E93CF9AC1B6F41C500F91D81 /* InfoCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93CF9AB1B6F41C500F91D81 /* InfoCardController.swift */; };
@@ -27,6 +26,7 @@
 		E9B141211B6724510075FA2A /* startbutton.svg in Resources */ = {isa = PBXBuildFile; fileRef = E9B141201B6724510075FA2A /* startbutton.svg */; };
 		E9B141231B6724670075FA2A /* rect4138.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B141221B6724670075FA2A /* rect4138.png */; };
 		E9B141251B6734CC0075FA2A /* 3player.svg in Resources */ = {isa = PBXBuildFile; fileRef = E9B141241B6734CC0075FA2A /* 3player.svg */; };
+		E9B93AC01B709C6400B12F12 /* gameboard.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B93ABF1B709C6400B12F12 /* gameboard.scnassets */; };
 		E9FDC9D21B6A787D009312D4 /* InfoCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDC9D11B6A787D009312D4 /* InfoCardModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,6 @@
 /* Begin PBXFileReference section */
 		E91C8DB71B6F0C9300661C53 /* CloseSceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseSceneView.swift; sourceTree = "<group>"; };
 		E91C8DBC1B6F3ECA00661C53 /* InfoCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCardView.swift; sourceTree = "<group>"; };
-		E91C8DBE1B6F3F1500661C53 /* GameBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
 		E91C8DC01B6F3FEF00661C53 /* StockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockView.swift; sourceTree = "<group>"; };
 		E91C8DC21B6F409900661C53 /* GameBoardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoardController.swift; sourceTree = "<group>"; };
 		E93CF9AB1B6F41C500F91D81 /* InfoCardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCardController.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		E9B141201B6724510075FA2A /* startbutton.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = startbutton.svg; path = images/startbutton.svg; sourceTree = "<group>"; };
 		E9B141221B6724670075FA2A /* rect4138.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rect4138.png; path = images/rect4138.png; sourceTree = "<group>"; };
 		E9B141241B6734CC0075FA2A /* 3player.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = 3player.svg; path = images/3player.svg; sourceTree = "<group>"; };
+		E9B93ABF1B709C6400B12F12 /* gameboard.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = gameboard.scnassets; sourceTree = "<group>"; };
 		E9E39FBB1B6A747D00E8BFEE /* SettingsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsModel.swift; path = ../SettingsModel.swift; sourceTree = "<group>"; };
 		E9FDC9D11B6A787D009312D4 /* InfoCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCardModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,7 +113,6 @@
 				E97168FE1B6A760900B33A17 /* GameSceneView.swift */,
 				E97169001B6A76EF00B33A17 /* GameSceneModelAndSequencer.swift */,
 				E9585FF91B5D975A00E22A0C /* GameViewController.swift */,
-				E91C8DBE1B6F3F1500661C53 /* GameBoardView.swift */,
 				E953A86B1B6A7CE90049E9A3 /* GameBoardModel.swift */,
 				E91C8DC21B6F409900661C53 /* GameBoardController.swift */,
 				E9FDC9D11B6A787D009312D4 /* InfoCardModel.swift */,
@@ -160,6 +159,7 @@
 		E9B1411E1B6724270075FA2A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E9B93ABF1B709C6400B12F12 /* gameboard.scnassets */,
 				E9B1411F1B6724340075FA2A /* images */,
 			);
 			name = Resources;
@@ -258,6 +258,7 @@
 				E9B141251B6734CC0075FA2A /* 3player.svg in Resources */,
 				E95860021B5D975A00E22A0C /* LaunchScreen.xib in Resources */,
 				E9585FFF1B5D975A00E22A0C /* Images.xcassets in Resources */,
+				E9B93AC01B709C6400B12F12 /* gameboard.scnassets in Resources */,
 				E9585FF81B5D975A00E22A0C /* art.scnassets in Resources */,
 				E9585FFD1B5D975A00E22A0C /* Main.storyboard in Resources */,
 				E9B141231B6724670075FA2A /* rect4138.png in Resources */,
@@ -280,7 +281,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9585FFA1B5D975A00E22A0C /* GameViewController.swift in Sources */,
-				E91C8DBF1B6F3F1500661C53 /* GameBoardView.swift in Sources */,
 				E91C8DBD1B6F3ECA00661C53 /* InfoCardView.swift in Sources */,
 				E953A86C1B6A7CE90049E9A3 /* GameBoardModel.swift in Sources */,
 				E93CF9AC1B6F41C500F91D81 /* InfoCardController.swift in Sources */,
