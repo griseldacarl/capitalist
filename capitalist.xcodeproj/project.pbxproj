@@ -10,6 +10,10 @@
 		030C0FFD1B6AEE8B009BA902 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C0FFC1B6AEE8B009BA902 /* PlayerModel.swift */; };
 		030C0FFF1B6AEF8D009BA902 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C0FFE1B6AEF8D009BA902 /* StockModel.swift */; };
 		030C10011B6AF54F009BA902 /* StockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C10001B6AF54F009BA902 /* StockManager.swift */; };
+		030C10031B6C5FDC009BA902 /* HotelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C10021B6C5FDC009BA902 /* HotelManager.swift */; };
+		030C10041B6C6821009BA902 /* HotelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C0FFA1B60A1A0009BA902 /* HotelModel.swift */; };
+		030C10051B6C6824009BA902 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E39FBB1B6A747D00E8BFEE /* SettingsModel.swift */; };
+		030C10061B6C682A009BA902 /* TileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C0FF81B5DB342009BA902 /* TileModel.swift */; };
 		E953A86A1B6A791F0049E9A3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E953A86C1B6A7CE90049E9A3 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		E9585FF61B5D975A00E22A0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9585FF51B5D975A00E22A0C /* AppDelegate.swift */; };
@@ -43,6 +47,7 @@
 		030C0FFC1B6AEE8B009BA902 /* PlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		030C0FFE1B6AEF8D009BA902 /* StockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		030C10001B6AF54F009BA902 /* StockManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockManager.swift; sourceTree = "<group>"; };
+		030C10021B6C5FDC009BA902 /* HotelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelManager.swift; sourceTree = "<group>"; };
 		E9585FF01B5D975A00E22A0C /* capitalist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capitalist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9585FF41B5D975A00E22A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9585FF51B5D975A00E22A0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +120,7 @@
 				E9FDC9D11B6A787D009312D4 /* InfoCardModel.swift */,
 				E9E39FBB1B6A747D00E8BFEE /* SettingsModel.swift */,
 				030C0FFA1B60A1A0009BA902 /* HotelModel.swift */,
+				030C10021B6C5FDC009BA902 /* HotelManager.swift */,
 				030C0FFC1B6AEE8B009BA902 /* PlayerModel.swift */,
 				030C0FFE1B6AEF8D009BA902 /* StockModel.swift */,
 				030C10001B6AF54F009BA902 /* StockManager.swift */,
@@ -276,12 +282,16 @@
 				E953A86C1B6A7CE90049E9A3 /* (null) in Sources */,
 				030C10011B6AF54F009BA902 /* StockManager.swift in Sources */,
 				030C0FFF1B6AEF8D009BA902 /* StockModel.swift in Sources */,
+				030C10041B6C6821009BA902 /* HotelModel.swift in Sources */,
 				030C0FFD1B6AEE8B009BA902 /* PlayerModel.swift in Sources */,
 				E9FDC9D21B6A787D009312D4 /* InfoCardModel.swift in Sources */,
 				E97168FF1B6A760900B33A17 /* GameSceneView.swift in Sources */,
 				E9B1411B1B66D49D0075FA2A /* WelcomeScreenAquireView.swift in Sources */,
+				030C10031B6C5FDC009BA902 /* HotelManager.swift in Sources */,
 				E953A86A1B6A791F0049E9A3 /* (null) in Sources */,
+				030C10061B6C682A009BA902 /* TileModel.swift in Sources */,
 				E9585FF61B5D975A00E22A0C /* AppDelegate.swift in Sources */,
+				030C10051B6C6824009BA902 /* SettingsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

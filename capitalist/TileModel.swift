@@ -9,16 +9,6 @@
 import Foundation
 import UIKit
 
-let whiteColor:UIColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-let yellowColor:UIColor = UIColor(red: 255/255, green: 255/255, blue: 0, alpha: 1)
-let redColor:UIColor = UIColor(red: 255/255, green: 0, blue: 0, alpha: 1)
-let blueColor:UIColor = UIColor(red: 0, green: 0, blue: 255/255, alpha: 1)
-let brownColor:UIColor = UIColor(red: 222/255, green: 185/255, blue: 135/255, alpha: 1)
-let greenColor:UIColor = UIColor(red: 0, green: 255/255, blue: 0, alpha: 1)
-let pinkColor:UIColor = UIColor(red: 255/255, green: 192/255, blue: 203/255, alpha: 1)
-let cyanColor:UIColor = UIColor(red: 0, green: 255/255, blue: 255/255, alpha: 1)
-let greyColor:UIColor = UIColor(red: 192/255, green: 192/255, blue: 192/255, alpha: 1)
-let blackColor:UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
 let tileCornerTopLeft:Int = 0
 let tileCornerTopRight:Int = 11
 let tileCornerBottomLeft:Int = 96
@@ -27,21 +17,101 @@ let tileCornerBottomRight:Int = 107
 
 class TileModel:NSObject {
 
-    var name:String = ""
-    var image:String = ""
-    var width:CGFloat
-    var height:CGFloat
-    var size:CGSize
-    var position:CGPoint = CGPoint(x: 0, y: 0)
-    var owner:Int = 0
-    var label:String = ""
+    var name:String {
+        return String(name)
+        }
+    var image:String {
+        get {
+            return String(self.image)
+        }
+        set {
+            self.image = newValue
+        }
+    }
+    var width:CGFloat {
+        get {
+            return CGFloat(self.width)
+        }
+        set {
+            self.width = newValue
+        }
+    }
+    var height:CGFloat {
+        get {
+            return CGFloat(self.height)
+        }
+        set {
+            self.height = newValue
+        }
+    }
+    var size:CGSize {
+        get {
+            return CGSize(width: self.size.width, height: self.size.height)
+        }
+        set {
+            self.size = newValue
+        }
+    }
+    var position:CGPoint {
+        get {
+            return CGPoint(x: self.position.x, y: self.position.y)
+        }
+        set {
+            self.position = newValue
+        }
+    }
+    var owner:Int {
+        get {
+            return Int(self.owner)
+        }
+        set {
+            self.owner = newValue
+        }
+    }
+    var label:String {
+        get {
+            return String(self.label)
+        }
+        set {
+            self.label = newValue
+        }
+    }
     var color:UIColor = whiteColor
-    var tileAbove:TileModel?
-    var tileBelow:TileModel?
-    var tileLeft:TileModel?
-    var tileRight:TileModel?
+    var tileAbove:TileModel? {
+        get {
+            return TileModel(self.tileAbove)
+        }
+        set {
+            self.tileAbove = newValue
+        }
+    }
+    var tileBelow:TileModel? {
+        get {
+            return TileModel(self.tileBelow)
+        }
+        set {
+            self.tileBelow = newValue
+        }
+    }
+    var tileLeft:TileModel? {
+        get {
+            return TileModel(self.tileLeft)
+        }
+        set {
+            self.tileLeft = newValue
+        }
+    }
+    var tileRight:TileModel? {
+        get {
+            return TileModel(self.tileRight)
+        }
+        set {
+            self.tileRight = newValue
+        }
+    }
     
     init(_label: String, _width: CGFloat, _height: CGFloat, tileSpacer: CGFloat, _position: CGPoint) {
+        super.init()
         self.label = _label
         self.size = CGSizeMake(CGFloat(_width),CGFloat(_height))
         self.height = _height
