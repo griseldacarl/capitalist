@@ -17,13 +17,13 @@ class StockManager:NSObject {
     var listOfHotel5:[TileModel] = []
     var listOfHotel6:[TileModel] = []
     var listOfHotel7:[TileModel] = []
-    var availHotel1Count:Int
-    var availHotel2Count:Int
-    var availHotel3Count:Int
-    var availHotel4Count:Int
-    var availHotel5Count:Int
-    var availHotel6Count:Int
-    var availHotel7Count:Int
+    var availHotel1Count:Int = 0
+    var availHotel2Count:Int = 0
+    var availHotel3Count:Int = 0
+    var availHotel4Count:Int = 0
+    var availHotel5Count:Int = 0
+    var availHotel6Count:Int = 0
+    var availHotel7Count:Int = 0
     
     func createStock() {
     }
