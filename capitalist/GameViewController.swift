@@ -39,41 +39,67 @@ class GameViewController: UIViewController {
         
         scene.rootNode.addChildNode(cameraNode)
         
+        
 //        // place the camera
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 10)
+        cameraNode.position = SCNVector3(x: 0, y: 1, z: 7)
 //        
         // create and add a light to the scene
-        let lightNode = SCNNode()
-        lightNode.light = SCNLight()
-        lightNode.light!.type = SCNLightTypeSpot
-        lightNode.light!.spotInnerAngle = 30.0
-        lightNode.light!.spotOuterAngle = 80.0
-        lightNode.position = SCNVector3(x: 0, y: 0, z: 20)
-        scene.rootNode.addChildNode(lightNode)
-//
+        let lightRightNode = SCNNode()
+        lightRightNode.light = SCNLight()
+        lightRightNode.light!.type = SCNLightTypeOmni
+        lightRightNode.position = SCNVector3(x: 30, y: 30, z: 100)
+        scene.rootNode.addChildNode(lightRightNode)
+
+        let lightLeftNode = SCNNode()
+        lightLeftNode.light = SCNLight()
+        lightLeftNode.light!.type = SCNLightTypeOmni
+        lightLeftNode.position = SCNVector3(x: -20, y: 30, z: 100)
+        scene.rootNode.addChildNode(lightLeftNode)
+
+        let lightRightBottomNode = SCNNode()
+        lightRightBottomNode.light = SCNLight()
+        lightRightBottomNode.light!.type = SCNLightTypeOmni
+        lightRightBottomNode.position = SCNVector3(x: 30, y: 0, z: 100)
+        scene.rootNode.addChildNode(lightRightBottomNode)
+        
+        let lightLeftBottomNode = SCNNode()
+        lightLeftBottomNode.light = SCNLight()
+        lightLeftBottomNode.light!.type = SCNLightTypeOmni
+        lightLeftBottomNode.position = SCNVector3(x: -20, y: 0, z: 100)
+        scene.rootNode.addChildNode(lightLeftBottomNode)
+
+        // create and add a light to the scene
+        let lightDirectionNode = SCNNode()
+        lightDirectionNode.light = SCNLight()
+        lightDirectionNode.light!.type = SCNLightTypeDirectional
+        lightDirectionNode.orientation = SCNQuaternion(x:0,y:0,z: 20, w:5)
+        scene.rootNode.addChildNode(lightDirectionNode)
+
+        
+        
         // create and add an ambient light to the scene
         let ambientLightNode = SCNNode()
         ambientLightNode.light = SCNLight()
         ambientLightNode.light!.type = SCNLightTypeAmbient
         ambientLightNode.light!.color = UIColor.whiteColor()
         scene.rootNode.addChildNode(ambientLightNode)
-//
-        //let boxGeometry = SCNBox(width: 10.0, height: 10.0, length: 10.0, chamferRadius: 1.0)
-        //let boxNode = SCNNode(geometry: boxGeometry)
-        //scene.rootNode.addChildNode(boxNode)
         
-        // retrieve the ship node
-      //  let ship = scene.rootNode.childNodeWithName("Plane_001", recursively: true)!
+        
+        
+//        // retrieve the ship node
+       let board = scene.rootNode.childNodeWithName("board", recursively: true)!
         
         // animate the 3d object
-       // ship.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 2, z: 0, duration: 1)))
-       
-        
+        board.runAction(SCNAction.rotateByX(1.58, y: 0, z: 0, duration: 1))
+        board.runAction(SCNAction.rotateByX(0, y: 0, z: -1.58, duration: 1))
+ //       board.runAction(SCNAction.scaleBy(0.5, duration: 1))
+//
         // retrieve the SCNView
         let scnView = self.view as! SCNView
         
-        // set the scene to the view
-        scnView.scene = scene
+        scnView.autoenablesDefaultLighting  = true
+        scnView.allowsCameraControl = true
+        
         
         // allows the user to manipulate the camera
         scnView.allowsCameraControl = true
@@ -82,8 +108,10 @@ class GameViewController: UIViewController {
         scnView.showsStatistics = true
         
         // configure the view
-        scnView.backgroundColor = UIColor.cyanColor()
+        scnView.backgroundColor = UIColor.whiteColor()
         
+        // set the scene to the view
+        scnView.scene = scene
         
         
        

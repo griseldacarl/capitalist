@@ -37,6 +37,7 @@ class HotelModel:NSObject {
     
     func calcStockPrice(thisHotel: HotelModel) -> Int{
         //Identify num of tiles using listOfTiles, then use InfoCard Model to match hotel and numTiles to Stock Price
+      return 0
     }
     
 }

@@ -26,7 +26,11 @@
 		E9B141211B6724510075FA2A /* startbutton.svg in Resources */ = {isa = PBXBuildFile; fileRef = E9B141201B6724510075FA2A /* startbutton.svg */; };
 		E9B141231B6724670075FA2A /* rect4138.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B141221B6724670075FA2A /* rect4138.png */; };
 		E9B141251B6734CC0075FA2A /* 3player.svg in Resources */ = {isa = PBXBuildFile; fileRef = E9B141241B6734CC0075FA2A /* 3player.svg */; };
-		E9B93AC01B709C6400B12F12 /* gameboard.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B93ABF1B709C6400B12F12 /* gameboard.scnassets */; };
+		E9C6CBF31B7110E200D2D623 /* HotelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C6CBEF1B7110E200D2D623 /* HotelModel.swift */; };
+		E9C6CBF41B7110E200D2D623 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C6CBF01B7110E200D2D623 /* PlayerModel.swift */; };
+		E9C6CBF51B7110E200D2D623 /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C6CBF11B7110E200D2D623 /* StockModel.swift */; };
+		E9C6CBF61B7110E200D2D623 /* TileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C6CBF21B7110E200D2D623 /* TileModel.swift */; };
+		E9C6CBF81B71169200D2D623 /* gameboard.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C6CBF71B71169200D2D623 /* gameboard.scnassets */; };
 		E9FDC9D21B6A787D009312D4 /* InfoCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDC9D11B6A787D009312D4 /* InfoCardModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +68,11 @@
 		E9B141201B6724510075FA2A /* startbutton.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = startbutton.svg; path = images/startbutton.svg; sourceTree = "<group>"; };
 		E9B141221B6724670075FA2A /* rect4138.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rect4138.png; path = images/rect4138.png; sourceTree = "<group>"; };
 		E9B141241B6734CC0075FA2A /* 3player.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = 3player.svg; path = images/3player.svg; sourceTree = "<group>"; };
-		E9B93ABF1B709C6400B12F12 /* gameboard.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = gameboard.scnassets; sourceTree = "<group>"; };
+		E9C6CBEF1B7110E200D2D623 /* HotelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelModel.swift; sourceTree = "<group>"; };
+		E9C6CBF01B7110E200D2D623 /* PlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		E9C6CBF11B7110E200D2D623 /* StockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
+		E9C6CBF21B7110E200D2D623 /* TileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileModel.swift; sourceTree = "<group>"; };
+		E9C6CBF71B71169200D2D623 /* gameboard.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = gameboard.scnassets; sourceTree = "<group>"; };
 		E9E39FBB1B6A747D00E8BFEE /* SettingsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsModel.swift; path = ../SettingsModel.swift; sourceTree = "<group>"; };
 		E9FDC9D11B6A787D009312D4 /* InfoCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCardModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,7 +126,11 @@
 				E9FDC9D11B6A787D009312D4 /* InfoCardModel.swift */,
 				E91C8DBC1B6F3ECA00661C53 /* InfoCardView.swift */,
 				E91C8DC01B6F3FEF00661C53 /* StockView.swift */,
+				E9C6CBF11B7110E200D2D623 /* StockModel.swift */,
+				E9C6CBEF1B7110E200D2D623 /* HotelModel.swift */,
 				E9E39FBB1B6A747D00E8BFEE /* SettingsModel.swift */,
+				E9C6CBF21B7110E200D2D623 /* TileModel.swift */,
+				E9C6CBF01B7110E200D2D623 /* PlayerModel.swift */,
 				E9B1411E1B6724270075FA2A /* Resources */,
 				E9585FF51B5D975A00E22A0C /* AppDelegate.swift */,
 				E9585FF71B5D975A00E22A0C /* art.scnassets */,
@@ -159,7 +171,7 @@
 		E9B1411E1B6724270075FA2A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E9B93ABF1B709C6400B12F12 /* gameboard.scnassets */,
+				E9C6CBF71B71169200D2D623 /* gameboard.scnassets */,
 				E9B1411F1B6724340075FA2A /* images */,
 			);
 			name = Resources;
@@ -219,6 +231,7 @@
 		E9585FE81B5D975A00E22A0C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Carl Mitchell";
 				TargetAttributes = {
@@ -258,7 +271,7 @@
 				E9B141251B6734CC0075FA2A /* 3player.svg in Resources */,
 				E95860021B5D975A00E22A0C /* LaunchScreen.xib in Resources */,
 				E9585FFF1B5D975A00E22A0C /* Images.xcassets in Resources */,
-				E9B93AC01B709C6400B12F12 /* gameboard.scnassets in Resources */,
+				E9C6CBF81B71169200D2D623 /* gameboard.scnassets in Resources */,
 				E9585FF81B5D975A00E22A0C /* art.scnassets in Resources */,
 				E9585FFD1B5D975A00E22A0C /* Main.storyboard in Resources */,
 				E9B141231B6724670075FA2A /* rect4138.png in Resources */,
@@ -281,14 +294,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9585FFA1B5D975A00E22A0C /* GameViewController.swift in Sources */,
+				E9C6CBF31B7110E200D2D623 /* HotelModel.swift in Sources */,
 				E91C8DBD1B6F3ECA00661C53 /* InfoCardView.swift in Sources */,
 				E953A86C1B6A7CE90049E9A3 /* GameBoardModel.swift in Sources */,
 				E93CF9AC1B6F41C500F91D81 /* InfoCardController.swift in Sources */,
 				E91C8DB81B6F0C9300661C53 /* CloseSceneView.swift in Sources */,
+				E9C6CBF41B7110E200D2D623 /* PlayerModel.swift in Sources */,
 				E9FDC9D21B6A787D009312D4 /* InfoCardModel.swift in Sources */,
 				E91C8DC31B6F409900661C53 /* GameBoardController.swift in Sources */,
+				E9C6CBF61B7110E200D2D623 /* TileModel.swift in Sources */,
 				E91C8DC11B6F3FEF00661C53 /* StockView.swift in Sources */,
 				E97168FF1B6A760900B33A17 /* GameSceneView.swift in Sources */,
+				E9C6CBF51B7110E200D2D623 /* StockModel.swift in Sources */,
 				E9B1411B1B66D49D0075FA2A /* WelcomeScreenAquireView.swift in Sources */,
 				E91C8DBB1B6F294300661C53 /* GameSceneModelAndSequencer.swift in Sources */,
 				E9585FF61B5D975A00E22A0C /* AppDelegate.swift in Sources */,
