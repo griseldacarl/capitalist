@@ -92,7 +92,6 @@ class GameViewController: UIViewController {
         // animate the 3d object
         board.runAction(SCNAction.rotateByX(1.58, y: 0, z: 0, duration: 1))
         board.runAction(SCNAction.rotateByX(0, y: 0, z: -1.58, duration: 1))
- //       board.runAction(SCNAction.scaleBy(0.5, duration: 1))
 //
         // retrieve the SCNView
         let scnView = self.view as! SCNView
