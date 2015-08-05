@@ -12,5 +12,23 @@ import SceneKit
 import SpriteKit
 
 class GameSceneView: SKScene {
-   
+ 
+    let infocard: InfoCardView=InfoCardView()
+    let stock: StockView = StockView()
+    
+    override init(size: CGSize){
+        super.init(size: size)
+        self.addChild(infocard)
+        self.addChild(stock)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateView", name: "GameSceneModelAndSequencer", object: nil)
+    }
+    
+     func updateView(){
+      println ("GameSceneView was updated!")
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
